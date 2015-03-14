@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".OperationSelectionActivity"
+    android:id="@+id/rel_layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CNC Calculator"
+        android:id="@+id/app_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Selecciona líneas que forman la esquina:"
+        android:id="@+id/select_type_text"
+        android:layout_above="@+id/optionRG"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/optionRG"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/first_option_button"
+            android:checked="false"
+            android:textOff="HORIZONTAL-INCLINADA"
+            android:textOn="HORIZONTAL-INCLINADA"
+            android:layout_above="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onToggle"/>
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/second_option_button"
+            android:checked="false"
+            android:layout_alignTop="@+id/first_option_button"
+            android:textOff="VERTICAL-INCLINADA"
+            android:textOn="VERTICAL-INCLINADA"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onToggle" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Posición ángulo:"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignStart="@+id/app_title"
+        android:id="@+id/positionRG">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/posicionRB1"
+            android:checked="false"
+            android:text="I"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/posicionRB2"
+            android:text="II"
+            android:layout_below="@+id/textView"
+            android:layout_toRightOf="@+id/first_option_button"
+            android:layout_toEndOf="@+id/first_option_button" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="III"
+            android:id="@+id/posicionRB3"
+            android:layout_below="@+id/posicionRB1"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IV"
+            android:id="@+id/posicionRB4"
+            android:layout_below="@+id/posicionRB2"
+            android:layout_alignLeft="@+id/posicionRB2"
+            android:layout_alignStart="@+id/posicionRB2" />
+    </RadioGroup>
+
+</RelativeLayout>

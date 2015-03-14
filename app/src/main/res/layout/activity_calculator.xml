@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.cnccalculator.CalculatorActivity">
+
+    <TextView android:text="Ingresa los valores:" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        style="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="X-Offset:"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/xoffset_in"
+        android:layout_toStartOf="@+id/xoffset_in"
+        android:layout_marginEnd="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/xoffset_in"
+        android:layout_below="@+id/textView2"
+        android:text="0.0"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="130dp"
+        android:width="50dp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Y-Offset:"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/yoffset_in"
+        android:layout_toStartOf="@+id/yoffset_in"
+        android:layout_marginEnd="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/yoffset_in"
+        android:layout_below="@+id/xoffset_in"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:text="0.0"
+        android:layout_marginEnd="130dp"
+        android:layout_alignStart="@id/xoffset_in" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Valor α:"
+        android:id="@+id/textView6"
+        android:layout_alignBottom="@+id/alpha_in"
+        android:layout_toStartOf="@+id/alpha_in"
+        android:layout_marginEnd="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/alpha_in"
+        android:layout_below="@+id/yoffset_in"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="0.0"
+        android:layout_marginEnd="130dp"
+        android:layout_alignStart="@id/xoffset_in" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Radio:"
+        android:id="@+id/textView7"
+        android:layout_toStartOf="@+id/radio_in"
+        android:layout_alignBottom="@+id/radio_in"
+        android:layout_marginEnd="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/radio_in"
+        android:layout_below="@+id/alpha_in"
+        android:layout_marginTop="15dp"
+        android:text="0.0"
+        android:layout_marginEnd="130dp"
+        android:layout_alignStart="@id/xoffset_in" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:text="Puntos CNC:"
+        android:id="@+id/textView3"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/radio_in"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Punto CNC 1"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="X: 0.0; Y: 0.0"
+        android:id="@+id/cnc_result1"
+        android:layout_alignStart="@id/textView8"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Punto CNC 2"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="X: 0.0; Y: 0.0"
+        android:id="@+id/cnc_result2"
+        android:layout_alignStart="@id/textView9"
+        android:layout_below="@+id/textView9"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
